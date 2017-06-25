@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current trends | Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <style>
+    .markdown-preview-enhanced pre.editor-colors.editor-colors,
+.markdown-preview-enhanced code {
+  background-color: #f7f7f7 !important;
+}
+pre.editor-colors {
+  background-color: #fff;
+  color: #333;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: #f5f5f5;
+}
+pre.editor-colors .invisible {
+  color: #c0c0c0;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #000;
+}
+pre.editor-colors .selection .region {
+  background-color: #c8c8fa;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: #c0c0c0;
+}
+pre.editor-colors .indent-guide {
+  color: #c0c0c0;
+}
+pre.editor-colors .wrap-guide {
+  background-color: #c0c0c0;
+}
+pre.editor-colors .gutter {
+  background-color: #fff;
+  color: #333;
+}
+pre.editor-colors .gutter .line-number {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #333;
+  background-color: #f5f5f5;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #333;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 236, 236, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #333;
+}
+pre.editor-colors .search-results .mpe-syntax--marker .region {
+  background-color: transparent;
+  border: 1px solid #ed6a43;
+}
+pre.editor-colors .search-results .mpe-syntax--marker.current-result .region {
+  border: 1px solid #fff;
+}
+.mpe-syntax--comment,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment,
+.mpe-syntax--string.mpe-syntax--comment {
+  color: #969896;
+}
+.mpe-syntax--constant,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--constant,
+.mpe-syntax--variable.mpe-syntax--other.mpe-syntax--constant,
+.mpe-syntax--variable.mpe-syntax--language {
+  color: #0086b3;
+}
+.mpe-syntax--entity,
+.mpe-syntax--entity.mpe-syntax--name {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #795da3;
+}
+.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
+  color: #333;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #63a35c;
+}
+.mpe-syntax--keyword {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #a71d5d;
+}
+.mpe-syntax--storage,
+.mpe-syntax--storage.mpe-syntax--type {
+  color: #a71d5d;
+}
+.mpe-syntax--storage.mpe-syntax--modifier.mpe-syntax--package,
+.mpe-syntax--storage.mpe-syntax--modifier.mpe-syntax--import,
+.mpe-syntax--storage.mpe-syntax--type.mpe-syntax--java {
+  color: #333;
+}
+.mpe-syntax--string,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
+.mpe-syntax--string .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded .mpe-syntax--source {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #183691;
+}
+.mpe-syntax--support {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--meta.mpe-syntax--property-name {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--variable {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #ed6a43;
+}
+.mpe-syntax--variable.mpe-syntax--other {
+  color: #333;
+}
+.mpe-syntax--invalid.mpe-syntax--broken {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #b52a1d;
+}
+.mpe-syntax--invalid.mpe-syntax--deprecated {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #b52a1d;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  font-style: italic;
+  text-decoration: underline;
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+.mpe-syntax--carriage-return {
+  font-style: italic;
+  text-decoration: underline;
+  background-color: #b52a1d;
+  color: #f8f8f8;
+  undefined: ^M;
+}
+.mpe-syntax--invalid.mpe-syntax--unimplemented {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #b52a1d;
+}
+.mpe-syntax--message.mpe-syntax--error {
+  color: #b52a1d;
+}
+.mpe-syntax--string .mpe-syntax--source {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #333;
+}
+.mpe-syntax--string .mpe-syntax--variable {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--source.mpe-syntax--regexp,
+.mpe-syntax--string.mpe-syntax--regexp {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #183691;
+}
+.mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--character-class,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--arbitrary-repitition {
+  color: #183691;
+}
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
+  font-weight: bold;
+  color: #63a35c;
+}
+.mpe-syntax--support.mpe-syntax--constant {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--support.mpe-syntax--variable {
+  color: #0086b3;
+}
+.mpe-syntax--meta.mpe-syntax--module-reference {
+  color: #0086b3;
+}
+.mpe-syntax--markup.mpe-syntax--list {
+  color: #693a17;
+}
+.mpe-syntax--markup.mpe-syntax--heading,
+.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--entity.mpe-syntax--name {
+  font-weight: bold;
+  color: #1d3e81;
+}
+.mpe-syntax--markup.mpe-syntax--quote {
+  color: #008080;
+}
+.mpe-syntax--markup.mpe-syntax--italic {
+  font-style: italic;
+  color: #333;
+}
+.mpe-syntax--markup.mpe-syntax--bold {
+  font-weight: bold;
+  color: #333;
+}
+.mpe-syntax--markup.mpe-syntax--raw {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--markup.mpe-syntax--deleted,
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header.mpe-syntax--from-file,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+.mpe-syntax--markup.mpe-syntax--inserted,
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header.mpe-syntax--to-file,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+.mpe-syntax--markup.mpe-syntax--changed,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--changed {
+  background-color: #ffe3b4;
+  color: #ef9700;
+}
+.mpe-syntax--markup.mpe-syntax--ignored,
+.mpe-syntax--markup.mpe-syntax--untracked {
+  color: #d8d8d8;
+  background-color: #808080;
+}
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--range {
+  color: #795da3;
+  font-weight: bold;
+}
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header {
+  color: #0086b3;
+}
+.mpe-syntax--meta.mpe-syntax--separator {
+  font-weight: bold;
+  color: #1d3e81;
+}
+.mpe-syntax--meta.mpe-syntax--output {
+  color: #1d3e81;
+}
+.mpe-syntax--brackethighlighter.mpe-syntax--tag,
+.mpe-syntax--brackethighlighter.mpe-syntax--curly,
+.mpe-syntax--brackethighlighter.mpe-syntax--round,
+.mpe-syntax--brackethighlighter.mpe-syntax--square,
+.mpe-syntax--brackethighlighter.mpe-syntax--angle,
+.mpe-syntax--brackethighlighter.mpe-syntax--quote {
+  color: #595e62;
+}
+.mpe-syntax--brackethighlighter.mpe-syntax--unmatched {
+  color: #b52a1d;
+}
+.mpe-syntax--sublimelinter.mpe-syntax--mark.mpe-syntax--error {
+  color: #b52a1d;
+}
+.mpe-syntax--sublimelinter.mpe-syntax--mark.mpe-syntax--warning {
+  color: #ed6a43;
+}
+.mpe-syntax--sublimelinter.mpe-syntax--gutter-mark {
+  color: #c0c0c0;
+}
+.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--reference.mpe-syntax--link,
+.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
+  color: #183691;
+  text-decoration: underline;
+}
+.scrollbar-style::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-style::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.scrollbar-style::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced-container .mpe-toolbar {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  opacity: 0;
+  display: block;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn {
+  float: right;
+  width: 32px;
+  margin-right: 4px;
+  opacity: 0.4;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn:hover {
+  opacity: 1.0;
+}
+.markdown-preview-enhanced-container:hover .back-to-top-btn,
+.markdown-preview-enhanced-container:hover .refresh-btn,
+.markdown-preview-enhanced-container:hover .sidebar-toc-btn {
+  display: block;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 268px;
+  height: 100%;
+  padding: 32px 0 12px 0;
+  overflow: auto;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  box-shadow: -4px 0px 12px rgba(150, 150, 150, 0.33);
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc a {
+  color: #333;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  padding: 0 1.6em;
+  margin-top: 0.8em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc li {
+  margin-bottom: 0.8em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  list-style-type: none;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-toolbar {
+  right: 300px;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .markdown-preview-enhanced {
+  width: calc(100% - 268px);
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar {
+  width: 8px;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-track,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-thumb,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow: initial;
+  margin: 10px 13px 10px 13px;
+  padding: 2em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[for="preview"] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5,
+.markdown-preview-enhanced h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: #000000;
+}
+.markdown-preview-enhanced h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-enhanced h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h6 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5 {
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1em;
+}
+.markdown-preview-enhanced h6 {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2 {
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced strong {
+  color: #000000;
+}
+.markdown-preview-enhanced del {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a {
+  color: #08c;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+.markdown-preview-enhanced img,
+.markdown-preview-enhanced svg {
+  max-width: 100%;
+}
+.markdown-preview-enhanced > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > ul,
+.markdown-preview-enhanced > ol {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol {
+  padding-left: 2em;
+}
+.markdown-preview-enhanced ul.no-list,
+.markdown-preview-enhanced ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-enhanced ul ul,
+.markdown-preview-enhanced ul ol,
+.markdown-preview-enhanced ol ol,
+.markdown-preview-enhanced ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li.task-list-item {
+  list-style: none;
+}
+.markdown-preview-enhanced li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-preview-enhanced .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.markdown-preview-enhanced blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #5c5c5c;
+  border-left: 4px solid #d6d6d6;
+}
+.markdown-preview-enhanced blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: #d6d6d6;
+  border: 0 none;
+}
+.markdown-preview-enhanced table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-enhanced table th {
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-preview-enhanced table td,
+.markdown-preview-enhanced table th {
+  border: 1px solid #d6d6d6;
+  padding: 6px 13px;
+}
+.markdown-preview-enhanced dl {
+  padding: 0;
+}
+.markdown-preview-enhanced dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-enhanced dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #000000;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+.markdown-preview-enhanced code::before,
+.markdown-preview-enhanced code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-enhanced pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced .highlight pre,
+.markdown-preview-enhanced pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 16px;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  color: #333;
+  background-color: #f0f0f0 !important;
+  border: #d6d6d6;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-enhanced pre {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+.markdown-preview-enhanced pre .section {
+  opacity: 1;
+}
+.markdown-preview-enhanced pre code,
+.markdown-preview-enhanced pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced pre code:before,
+.markdown-preview-enhanced pre tt:before,
+.markdown-preview-enhanced pre code:after,
+.markdown-preview-enhanced pre tt:after {
+  content: normal;
+}
+.markdown-preview-enhanced p,
+.markdown-preview-enhanced blockquote,
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol,
+.markdown-preview-enhanced dl,
+.markdown-preview-enhanced pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo {
+  counter-reset: lineNo;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo .line::before {
+  display: inline-block;
+  counter-increment: lineNo;
+  content: counter(lineNo);
+  text-align: right;
+  padding: 0;
+  margin-left: -1em;
+  margin-right: 1.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100 .line::before {
+  width: 2em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-1000 .line::before {
+  width: 2.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-10000 .line::before {
+  width: 3em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100000 .line::before {
+  width: 3.5em;
+}
+.markdown-preview-enhanced kbd {
+  color: #000000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .pagebreak,
+.markdown-preview-enhanced .newpage {
+  page-break-before: always;
+}
+@media screen and (min-width: 914px) {
+  .markdown-preview-enhanced {
+    width: 980px;
+    margin: 10px auto;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .markdown-preview-enhanced {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media print {
+  .markdown-preview-enhanced {
+    background-color: #fff;
+    /*table,*/
+  }
+  .markdown-preview-enhanced h1,
+  .markdown-preview-enhanced h2,
+  .markdown-preview-enhanced h3,
+  .markdown-preview-enhanced h4,
+  .markdown-preview-enhanced h5,
+  .markdown-preview-enhanced h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+  .markdown-preview-enhanced blockquote {
+    color: #5c5c5c;
+  }
+  .markdown-preview-enhanced pre {
+    page-break-inside: avoid;
+  }
+  .markdown-preview-enhanced table {
+    display: table;
+  }
+  .markdown-preview-enhanced img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .markdown-preview-enhanced pre,
+  .markdown-preview-enhanced code {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+.markdown-preview-enhanced .mathjax-exps .MathJax_Display {
+  text-align: center !important;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk {
+  position: relative;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div {
+  overflow-x: auto;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div svg {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk pre {
+  cursor: text;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn {
+  float: right;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #eee;
+  background-color: #528bff;
+  background-image: none;
+  border: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn:hover,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn:hover {
+  background-color: #4b7fe8;
+  cursor: pointer;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk:hover .btn-group {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85em;
+  color: inherit;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .status {
+  display: block;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .status {
+  display: none;
+}
+/*
+ * Reveal.js styles
+ */
+[data-presentation-preview-mode] {
+  background-color: #f4f4f4;
+}
+[data-presentation-preview-mode] .preview-slides {
+  width: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide {
+  position: relative;
+  background-color: #fff;
+  padding: 2em !important;
+  margin-bottom: 12px;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 16px 4px #eeeeee;
+  font-size: 24px;
+}
+[data-presentation-preview-mode] .preview-slides .slide h1,
+[data-presentation-preview-mode] .preview-slides .slide h2,
+[data-presentation-preview-mode] .preview-slides .slide h3,
+[data-presentation-preview-mode] .preview-slides .slide h4,
+[data-presentation-preview-mode] .preview-slides .slide h5,
+[data-presentation-preview-mode] .preview-slides .slide h6 {
+  margin-top: 0;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 1;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  z-index: 2;
+}
+[data-presentation-preview-mode] section {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  font-size: 100%;
+  font: inherit;
+}
+.markdown-preview-enhanced[data-presentation-mode] {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] h1,
+.markdown-preview-enhanced[data-presentation-mode] h2,
+.markdown-preview-enhanced[data-presentation-mode] h3,
+.markdown-preview-enhanced[data-presentation-mode] h4,
+.markdown-preview-enhanced[data-presentation-mode] h5,
+.markdown-preview-enhanced[data-presentation-mode] h6 {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] strong {
+  font-weight: bold;
+}
+.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
+  display: none;
+}
+.markdown-preview-enhanced .slides {
+  text-align: left !important;
+}
+
+    /*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+
+
+  </head>
+  <body class="markdown-preview-enhanced   "  >
+
+  <p><center><br>
+<h1>Report</h1><br>
+<h2>Events and on-line courses</h2><br>
+<h3>Current trends</h3><br>
+<br><br>
+<h4>Author</h4><br>
+<b>David Lozano Jarque (NIU 1359958)</b><br>
+<br><br>
+Escola d'Enginyeria, Universitat Autònoma de Barcelona<br>
+Course 2016-2017<br>
+</center></p>
+<div style="page-break-after: always;"></div>
+<h1 id="index">Index</h1>
+<p>In the following table, there is the summary of events and courses (activities) that will be detailed in this report, providing its title, time spent on them and a reference to the page where the activity details start. The activities are sorted in chronologically ascending order. Use the links in the numbers to go to the activity report.</p>
+<table>
+<thead>
+<tr><th style="text-align:right">Number</th><th style="text-align:left">Title</th><th style="text-align:center">Hours</th><th style="text-align:center">Page</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:right"><a href="#activity-1">1</a></td><td style="text-align:left">Barcelona Wolfram Hackathon</td><td style="text-align:center">10</td><td style="text-align:center">2</td></tr>
+<tr><td style="text-align:right"><a href="#activity-2">2</a></td><td style="text-align:left">Software protection and commercialization</td><td style="text-align:center">4.5</td><td style="text-align:center">4</td></tr>
+<tr><td style="text-align:right"><a href="#activity-3">3</a></td><td style="text-align:left">Deloitte: integration of a SSDLC methodology in project management</td><td style="text-align:center">1.5</td><td style="text-align:center">6</td></tr>
+<tr><td style="text-align:right"><a href="#activity-4">4</a></td><td style="text-align:left">Mango: delivering value</td><td style="text-align:center">1.5</td><td style="text-align:center">8</td></tr>
+<tr><td style="text-align:right"><a href="#activity-5">5</a></td><td style="text-align:left">Everis: agile methodologies in project management</td><td style="text-align:center">3</td><td style="text-align:center">10</td></tr>
+<tr><td style="text-align:right"><a href="#activity-6">6</a></td><td style="text-align:left">Coursera.org: Bitcoin and cryptocurrencies technologies</td><td style="text-align:center">20</td><td style="text-align:center">12</td></tr>
+<tr><td style="text-align:right"><a href="#activity-7">7</a></td><td style="text-align:left">MSI Experience UAB</td><td style="text-align:center">4</td><td style="text-align:center">14</td></tr>
+<tr><td style="text-align:right"><a href="#activity-8">8</a></td><td style="text-align:left">Barcelona Blockchain Winter Meetup</td><td style="text-align:center">3</td><td style="text-align:center">16</td></tr>
+<tr><td style="text-align:right"><a href="#activity-9">9</a></td><td style="text-align:left">uCode EINA powered by Adidas</td><td style="text-align:center">25</td><td style="text-align:center">18</td></tr>
+<tr><td style="text-align:right"><strong>Total</strong></td><td style="text-align:left"><em>9 activities (8 events &amp; 1 on-line course)</em></td><td style="text-align:center"><em>72.5</em></td><td style="text-align:center"><em>21</em></td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h1 id="activities">Activities</h1>
+<p>Along these pages, the activities (events and on-line courses) which I assisted during the academic course will be detailed providing the details about each activity beside an activity content summary, rating (using a <a href="https://en.wikipedia.org/wiki/Likert_scale">Likert scale</a>) and review. Activities' attendance certificates will be attached at the end of this report.</p>
+<h2 id="a-nameactivity-1-1-barcelona-wolfram-hackathon"><a name="activity-1"> 1. Barcelona Wolfram Hackathon</a></h2>
+<h3 id="details">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2016-09-17</td><td style="text-align:center">09:30h (CEST)</td><td style="text-align:center"><a href="https://goo.gl/maps/tY9qv6HnQ6o">Barcelona Mobile World Centre</a></td><td style="text-align:center"><a href="https://www.wolfram.com">Wolfram: Computation Meets Knowledge</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center"><a href="https://goo.gl/VrKZ89">https://goo.gl/VrKZ89</a></td></tr>
+</tbody>
+</table>
+<h3 id="summary">Summary</h3>
+<p>The activity started after registration and a short breakfast with the introduction by the organizer and Wolfram Europe Account Executive, Christopher Jordan to the <em>Wolfram</em> company and its services, that are far more than the well known computing engine <em>Wolfram Alpha</em>.</p>
+<p>After that, Bernat and Jofre Espigulé (twin brothers) who studied both at UAB and work together in the <em>Wolfram</em> company, taught us how to use the <a href="https://www.wolfram.com/language/"><em>Wolfram Language</em></a> in their software <a href="https://www.wolfram.com/mathematica/"><em>Wolfram Mathematica</em></a>, a closed-source proprietary software that ables the user to use the Wolfram Computing engine and its features (all kinds of mathematical calculus, machine learning and artificial intelligence functionalities among others like numerous data feeds) using the Wolfram Language in script-like files.</p>
+<p>Once the explanation finished (1hr), we were given temporary licenses so that we could create a project that day using its software. After 8hr. approximately of thinking about a project to develop it and actually develop it, the projects were presented and two of them were awarded with prizes: its own software lifetime licenses.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="review">Review</h3>
+<p>Despite the potential of the software that Christopher Jordan exposed before the technical explanations of how to use it with the language, the explanation of Jofré and Bernat was poor as they didn't know how to transmit knowledge to the audience. They just passed over the on-line tutorial explaining punctual, unrelated things as they appeared on the screen, as if they had not prepared the presentation.</p>
+<p>Our project was developed along with a team (Carlos González and Cristian Garcia also from UAB), and consisted in a very simple application that created a word cloud with the most used words by a Twitter user. Due to the bad explanations of the language, we had to loose time reading the language tutorials as the presentation did not really taught us anything. Furthermore, the language is very different from any programming language existing in syntax terms and also difficult to use.</p>
+<p>To summarize, it was great to discover the Wolfram Mathematica software and its language Wolfram Language because of its potential but the bad explanation of the speakers and hard to use syntax of the language itself, made the hackathon a day to learn the language rather than a day to develop a cool and trendy project.</p>
+<h3 id="rating">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐</strong></td><td style="text-align:center">6.5/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-2-2-software-protection-and-commercialization"><a name="activity-2"> 2. Software protection and commercialization</a></h2>
+<h3 id="details-1">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2016-12-01</td><td style="text-align:center">10:30h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/DaESrvtnoz72">Escola d'Enginyeria</a></td><td style="text-align:center"><a href="http://www.uab.cat/web/serveis/valoritzacio-de-la-recerca-1345672826947.html">Oficina de Valorització i Patents</a> &amp; <a href="http://elzaburu.es/es/">Elzaburu</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center"><a href="https://goo.gl/daxrHa">https://goo.gl/daxrHa</a></td></tr>
+</tbody>
+</table>
+<h3 id="summary-1">Summary</h3>
+<p>After presenting themselves, the lawyers of <a href="http://elzaburu.es/es/">Elzaburu</a> explained to the audience how (proprietary) software can be protected and securely commercialized after it has been developed. Starting with the definition of what is legally an invention, the presentation showed the main points an invention must provide in order for it to be patentable.</p>
+<p>After that, they focused on how this law applies to software, with examples such as <a href="http://www.businessinsider.com/amazons-patent-on-one-click-payments-to-expire-2017-1">Amazon 1-click buy patent</a> and how this patents are relevant in order to protect proprietary software from being copied without permission. Also, the example demonstrated how patent laws are different in America and Europe and why this happens.</p>
+<p>In a nutshell, the event provided the audience a great introduction of how patent laws work, starting with the definition of what can be patented and ending with technical details about those laws.</p>
+<h3 id="review-1">Review</h3>
+<p>The event provided a great summary of how we can protect our software when commercializing it, not just the way we can do it, but also if we can do it using patents and if we should do it, while providing interesting details about patents and its related laws worldwide.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="rating-1">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐⭐</strong></td><td style="text-align:center">8.5/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-3-3-deloitte-integration-of-a-ssdlc-methodology-in-project-management"><a name="activity-3"> 3. Deloitte: integration of a SSDLC methodology in project management</a></h2>
+<h3 id="details-2">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2016-12-16</td><td style="text-align:center">09:00h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/DaESrvtnoz72">Escola d'Enginyeria</a></td><td style="text-align:center"><a href="https://www2.deloitte.com">Deloitte</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center">-</td></tr>
+</tbody>
+</table>
+<h3 id="summary-2">Summary</h3>
+<p>Two software engineers from <em>Deloitte</em> introduced the audience about SSDLC: <em>Secure Software Development Cycles</em>. They started defining briefly what Software Development Cycles stand for and after that, presented situations in which some of them due to the fast development iterations, led to insecure software development because of the coding rush. To sum up, they presented a series of techniques, that <em>Microsoft</em> recommended in what they call a <a href="https://www.microsoft.com/en-us/sdl/">Security Development Cycle</a>, paring each technique to a software development cycle that could cause security issues due to the hurries.</p>
+<h3 id="review-2">Review</h3>
+<p>In spite of the big potential of those techniques to reduce the potential security vulnerabilities in software applications and libraries while keeping the development speed that development cycles offer, the presentation showed everything from a theoretical perspective. Therefore the speech, resulted in the presentation of great techniques that were not shown how they can be applied. Concisely, the presentation provided a great introduction to SSDLC, but the tools or means to apply them in real projects made the speech loose potential value.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="rating-2">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐</strong></td><td style="text-align:center">5/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-4-4-mango-delivering-value"><a name="activity-4"> 4. Mango: delivering value</a></h2>
+<h3 id="details-3">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2016-12-16</td><td style="text-align:center">10:30h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/DaESrvtnoz72">Escola d'Enginyeria</a></td><td style="text-align:center"><a href="http://shop.mango.com/iframe.faces?state=she_001_ES">Mango</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center">-</td></tr>
+</tbody>
+</table>
+<h3 id="summary-3">Summary</h3>
+<p>The speech was about how the <em>Mango</em> fashion company used their website to sell fashion on-line and the importance of it by explaining their techniques for software development and team management. Initially, the speakers presented the company, some details about it and just after that, how their on-line store provided great value to its brand and revenue. From that moment forward, they used the importance of their on-line store to explain the importance of not just the appearance and UX but also the performance to provide customers a great shopping experience even in the most difficult moments such as Black Friday or Cybermonday. They also explained the technologies they used to achieve their success and why not just those technologies but a good team of valuable and skilled people were needed to accomplish it. Therefore they also explained how team management is important to develop great products and the things they learned from team management with all their experience in the field.</p>
+<h3 id="review-3">Review</h3>
+<p>The presentation, rather than focusing on the brand or company, showed really practical and useful advices on how to develop great software. Not just focusing on the technology (where they provided specifically all of the technologies they used), but also on team management (where they also stated great guidance based on their practical knowledge). To sum up, one of the greatest speeches of software development I've assisted to, providing practical value on every aspect that involves creating a software, in this case, a web application.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="rating-3">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐⭐⭐</strong></td><td style="text-align:center">9.75/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-5a-5-everis-agile-methodologies-in-project-management"><a name="activity-5"></a> 5. Everis: agile methodologies in project management</h2>
+<h3 id="details-4">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2016-12-19</td><td style="text-align:center">10:30h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/DaESrvtnoz72">Escola d'Enginyeria</a></td><td style="text-align:center"><a href="https://www.everis.com/spain/es/home-spain">Everis</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center">-</td></tr>
+</tbody>
+</table>
+<h3 id="summary-4">Summary</h3>
+<p>Using a game, <em>Everis</em> showed how agile methodologies are a good and simple to use way to develop projects with a team. They started defining the <a href="https://kanbantool.com">KanBan methodology</a> and just after that, presented a game to simulate a project using a series of tasks that the project requires to be completed and a dice to simulate tasks working time. With this gamification experience, we were able to understand practically how the methodology works and why it's really useful.</p>
+<h3 id="review-4">Review</h3>
+<p>The event provided a great and fun experience to learn the KanBan methodology not just with the typical slide presentation but also with a gamification of the knowledge that made the audience understand how it worked at a practical level. Not just the content was interesting but the way how it was exposed made the event provide real, useful and practical applicable knowledge.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="rating-4">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐⭐⭐</strong></td><td style="text-align:center">9.75/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-6a-6-courseraorg-bitcoin-and-cryptocurrencies-technologies"><a name="activity-6"></a> 6. Coursera.org: Bitcoin and cryptocurrencies technologies</h2>
+<h3 id="details-5">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2016-11-28</td><td style="text-align:center">00:00h (UTC)</td><td style="text-align:center">(on-line) <a href="https://coursera.org">Coursera</a>)</td><td style="text-align:center"><a href="https://www.princeton.edu/">University of Princeton</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center"><a href="https://goo.gl/s4cW8Y">https://goo.gl/s4cW8Y</a></td></tr>
+</tbody>
+</table>
+<h3 id="summary-5">Summary</h3>
+<p>This on-line course, provided by the <em>University of Princeton</em>, introduces us to the cryptocurrencies technologies, focusing in <a href="https://bitcoin.org">Bitcoin</a> cryptocurrency. The course starts with an introduction to the base technologies that make cryptocurrencies possible, mainly cryptographical ones such as <a href="https://en.wikipedia.org/wiki/Hash_function">hash functions</a> and <a href="https://en.wikipedia.org/wiki/Asymmetric_crypto">asymmetric cryptography</a>. After that, explains how this technologies combined with <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain technology</a> can make a cryptocurrency possible, avoiding the <a href="https://en.wikipedia.org/wiki/Double-spending">double spend attack</a> and reaching a global worldwide consensus across all cryptocurrency users in the network (also called nodes). Once all technologies have been explained, explains at a high level how the Bitcoin is implemented. Eventually, the course finishes explaining political issues and other non-technical information about the cryptocurrency ecosystem like market exchanges (cryptocurrencies forex) and <a href="https://en.bitcoin.it/wiki/Mixing_service">mixing</a>.</p>
+<h3 id="review-5">Review</h3>
+<p>The course provides a great introduction to cryptocurrencies at a general level for everyone with a basic understanding of computer science and cryptography. Then, focuses on how this technologies that make possible cryptocurrencies are applied in Bitcoin. The main pro of the course that is easy to understand for everyone makes that if you want to develop some project using Bitcoin, there is not enough detail level to start. I think some chapters should be introduced to focus on how Bitcoin works at a low level, as there's few information about it over the Internet. Despite that, all information (videos and texts), and deliverables is really well done and accomplishes the main goal: introducing a newbie into the Bitcoin and cryptocurrencies ecosystems.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="rating-5">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐⭐⭐</strong></td><td style="text-align:center">9/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-7a-7-msi-experience-uab"><a name="activity-7"></a> 7. MSI Experience UAB</h2>
+<h3 id="details-6">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2017-02-16</td><td style="text-align:center">16:00h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/DaESrvtnoz72">Escola d'Enginyeria</a></td><td style="text-align:center"><a href="https://es.msi.com/">MSI Spain</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center"><a href="https://goo.gl/YWjHPr">https://goo.gl/YWjHPr</a></td></tr>
+</tbody>
+</table>
+<h3 id="summary-6">Summary</h3>
+<p>The speech provided an introduction to the <em>MSI company</em> and its impact in Spain, explaining the products they offered, why they are built that way, and the problems that appear while creating their hardware and what solutions do they apply to solve them. Despite the speakers being really talented as communicators, the speech didn't provide much knowledge, as it was focused on sponsoring the own company products and services versus the competence</p>
+<h3 id="review-6">Review</h3>
+<p>In my opinion, the whole speech was a boringly large advertisement about all products MSI offered and why theirs where better than their competitors. Few details about the technology, the problems and solutions they applied when creating the hardware was explained and everything was extremely focused on selling their products rather than providing the audience some kind of useful knowledge. The worst event I assisted in the whole subject. Not because of the speakers (they made the whole speech really active, interacting with the audience), but because of the marketing-orientation of the whole speech. They even offered prizes to the people of the audience who better know what they're products are (best performance GPU model, product launch dates...). Because of this I think assisting to this activity should not be recommended in this subject anymore as does not offer any kind of knowledge about technology. Complete waste of time if you're not interested in MSI products.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="rating-6">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐</strong></td><td style="text-align:center"><span style="color:red; font-weight:bold">1/10</span></td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-8a-8-barcelona-blockchain-winter-meetup"><a name="activity-8"></a> 8. Barcelona Blockchain Winter Meetup</h2>
+<h3 id="details-7">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2017-02-20</td><td style="text-align:center">10:30h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/3GujmcU3kfE2">Antiga Fàbrica Estrella Damm</a></td><td style="text-align:center"><a href="https://www.meetup.com/es-ES/barcelonablockchain/">Barcelona Blockchain Meetup</a></td><td style="text-align:center"><em>Free</em></td><td style="text-align:center"><a href="https://goo.gl/jHgUQu">https://goo.gl/jHgUQu</a></td></tr>
+</tbody>
+</table>
+<h3 id="summary-7">Summary</h3>
+<p>This meetup, organized by Albert Castellana from the NEM foundation, consisted in the speech of several organizations that were developing <a href="https://en.wikipedia.org/wiki/Block_chain">Blockchain technologies</a> related projects. The following speechs took place:</p>
+<ul>
+<li><strong><a href="http://www.becon.global">BECON Global</a></strong> presented itself as an organization that provided help to organizations who wanted to develop new blockchain products and also focused on spreading the word about blockchain technologies and its potential to encourage traditional organizations develop blockchain projects.</li>
+<li><strong><a href="https://www.linkedin.com/pulse/blockchain-sharing-economy-marc-rocas">Blockchain &amp; Sharing economy</a></strong> explained why blockchain can be used in sharing economies, the new economy model to connect sellers and buyers providing trust without a third party.</li>
+<li><strong><a href="https://www.uport.me/">uPort: Decentralized Identity for All</a></strong> showed how they developed a blockchain to create a distributed and decentralized storage of identities intended for a global and secure use, as the way to use identities in the future in a universal and decentralized identity blockchain that could help to solve the problem not just of authentication but also universal identity storage.</li>
+<li><strong><a href="https://aragon.one">Aragon: Create and manage companies on top of Ethereum</a></strong> performed a demo about their <a href="http://www.coindesk.com/information/what-is-a-decentralized-application-dapp/">DApp (Distributed Application)</a> that using a modern web UIX could manage an entire organization main processes using democratic processes and everything over the <a href="https://ethereum.org">Ethereum</a> blockchain.</li>
+</ul>
+<blockquote>
+<p>Being one of the most interesting projects I've seen in all the subject events, I kept following this project development after the blockchain. And they have done really great improvements (<a href="https://goo.gl/Pt9wqC">https://goo.gl/Pt9wqC</a>)</p>
+</blockquote>
+<ul>
+<li><strong><a href="https://status.im">Status: Lowering Ethereum's Barriers to Entry</a></strong> tried to introduce blockchain technologies to everyone by developing a mobile application that interacted with <a href="https://ethereum.org">Ethereum</a> blockchain with a simple, modern and usable mobile user interface in their mobile application.</li>
+</ul>
+<h3 id="review-7">Review</h3>
+<p>One of the most interesting talks I've assisted to, not just because the content, but also because the projects presented were really interesting and innovative. Also, that was one of the first events that were not just about one company but also presented several different and great speeches / projects. Although I liked the contents and speeches, the traditional way some of them were exposed (classical slides) and presenting all of them together without a break was the only con I found.</p>
+<h3 id="rating-7">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐⭐⭐</strong></td><td style="text-align:center">9/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="a-nameactivity-9a-9-ucode-eina-powered-by-adidas"><a name="activity-9"></a> 9. uCode EINA powered by Adidas</h2>
+<h3 id="details-8">Details</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Date</th><th style="text-align:center">Time</th><th style="text-align:center">Place</th><th style="text-align:center">Organization</th><th style="text-align:center">Price</th><th style="text-align:center">Website</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">2017-03-11</td><td style="text-align:center">18:00h (CET)</td><td style="text-align:center"><a href="https://goo.gl/maps/CoyBjN2kUox">EINA @ UniZar</a></td><td style="text-align:center"><a href="https://eina.unizar.es/">EINA @ UniZar</a></td><td style="text-align:center"><em>Free*</em></td><td style="text-align:center"><a href="http://ucode.es">http://ucode.es</a></td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>*: they even offered studentships to pay for mobility charges for students who did not live in Zaragoza</p>
+</blockquote>
+<h3 id="summary-8">Summary</h3>
+<p>The three-day weekend hackathon consisted in developing a project for a sponsor who set the area and guidelines for the project, where the best project for each sponsor would be rewarded by the sponsor. The main sponsor was <a href="http://adidas.es"><em>Adidas</em></a> but there were several ones like <a href="https://www.hiberus.com/hiberus"><em>Hiberus</em></a>, <a href="http://inycom.es/"><em>Inycom</em></a>, among others.</p>
+<blockquote>
+<p>Our project, <a href="https://goo.gl/L8Y7uu"><em>Smartlify</em></a>, developed by a team of several UAB students (Carlos González, Cristian Garcia and Cristina Pérez) consisted in attaching a Raspberry Pi into a WiFi controlled terrestrial drone to perform automatic remote Wireless audits. The drone can be controlled with an Android application using its API, that also provided in the application interface a list of WiFi AP near the drone using the information that the Raspberry Pi provided. <a href="https://goo.gl/L8Y7uu">https://goo.gl/L8Y7uu</a><br>
+<img src="pics/smartlify_ui.jpg" alt="smartlify_ui"><br>
+<small><em>Figure 1. A screenshot of the <a href="[https://goo.gl/L8Y7uu](https://goo.gl/L8Y7uu)"><em>Smartlify</em></a> Android application user interface</em></small></p>
+</blockquote>
+<p>The event organizers provided all participants breakfast, lunch and dinner everyday, two tennis tables to play (and also a tennis table competition), a videoconsole (and also a FIFA game competition) and inflatable mattresses inside sleeping rooms.</p>
+<h3 id="review-8">Review</h3>
+<p>A great experience with nice organizers, sponsors, participants and environment. The organization provided everything in order that participants could develop their projects in good conditions (workplaces with network in a big room all together) and also everything for participants to stay and live at the Zaragoza University during the weekend (entertainment, food and beds). A great organization that resulted in a cool hackathon with interesting projects developed.</p>
+<h3 id="rating-8">Rating</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Question</th><th style="text-align:center">Strongly disagree</th><th style="text-align:center">Disagree</th><th style="text-align:center">Neutral</th><th style="text-align:center">Agree</th><th style="text-align:center">Strongly agree</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Fit my expectations</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Interesting content and approach</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center">Will be useful</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td><td style="text-align:center">⭐</td></tr>
+<tr><td style="text-align:center"><strong><em>Global rating</em></strong></td><td style="text-align:center"><strong>⭐⭐⭐⭐⭐</strong></td><td style="text-align:center">9.5/10</td></tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h3 id="multimedia">Multimedia</h3>
+<p>The organizers took photos during the event, available in the following link:<br>
+<center><a href="https://flic.kr/s/aHskRnrFqU">https://flic.kr/s/aHskRnrFqU</a></center></p>
+<h4 id="team-photo">Team photo</h4>
+<p>Here is our team's photography took by the event's organization<br>
+<img src="pics/ucode_smartlyteam.jpg" alt="ucode_team"><br>
+<center><small><em>Figure 2. uCode team SmartlyTeam. Source: <a href="https://flic.kr/p/SZoW1F">https://flic.kr/p/SZoW1F</a></em></small></center></p>
+<div style="page-break-after: always;"></div>
+<h1 id="global-subject-review">Global subject review</h1>
+<p>I think the subject provides a great way to learn new knowledge in a different way than the classical one: assisting to master classes and performing practices. Furthermore, the system of events recommendation provided by the subject coordinator allows us to know which events could be interesting, but giving us the option to suggest our own events if we find any interesting one (after the coordinator's approval).</p>
+<p>An improvement for the subject would be to provide free access with invitations to paid events (most of suggested events were free and publicly accessible), as we are assisting as students and not with commercial interest and some events provide free passes for those cases.</p>
+<p>This subject should become part of every subject, like master classes and practices currently are.</p>
+<div style="page-break-after: always;"></div>
+<p><center><br>
+<br><br><br><br><br><br>
+<h1>Attendance certificates</h1><br>
+<small><em>For every activity, in the same order of appearance<br>
+(just in printed version)</em></small><br>
+</center></p>
+<div style="page-break-after: always;"></div>
+<h1 id="about-the-document">About the document</h1>
+<p>This document is written using Markdown, and publicly available on-line in web format (HTML) in the following URL (mobile-compatible):<br>
+<center><a href="https://davidlj95.com/uab-current-trends">https://davidlj95.com/uab-current-trends</a></center><br>
+The PDF file is also available in the same site:</p>
+<p><center><a href="https://davidlj95.com/uab-current-trends/README.pdf">https://davidlj95.com/uab-current-trends/README.pdf</a></center></p>
+<h2 id="sources">Sources</h2>
+<p>Sources of this document are also publicly available in <em>GitHub</em>:<br>
+<center><a href="https://github.com/davidlj95/uab-current-trends">https://github.com/davidlj95/uab-current-trends</a></center></p>
+<div style="page-break-after: always;"></div>
+
+
+  </body>
+
+</html>

@@ -255,6 +255,7 @@ One of the most interesting talks I've assisted to, not just because the content
 The three-day weekend hackathon consisted in developing a project for a sponsor who set the area and guidelines for the project, where the best project for each sponsor would be rewarded by the sponsor. The main sponsor was [_Adidas_](http://adidas.es) but there were several ones like [_Hiberus_](https://www.hiberus.com/hiberus), [_Inycom_](http://inycom.es/), among others.
 
 > Our project, [_Smartlify_](https://goo.gl/L8Y7uu), developed by a team of several UAB students (Carlos González, Cristian Garcia and Cristina Pérez) consisted in attaching a Raspberry Pi into a WiFi controlled terrestrial drone to perform automatic remote Wireless audits. The drone can be controlled with an Android application using its API, that also provided in the application interface a list of WiFi AP near the drone using the information that the Raspberry Pi provided. https://goo.gl/L8Y7uu
+>
 > ![smartlify_ui](pics/smartlify_ui.jpg)
 > <small>_Figure 1. A screenshot of the [_Smartlify_](https://goo.gl/L8Y7uu) Android application user interface_</small>
 
@@ -275,7 +276,10 @@ A great experience with nice organizers, sponsors, participants and environment.
 
 ### Multimedia
 The organizers took photos during the event, available in the following link:
-<center>https://flic.kr/s/aHskRnrFqU</center>
+<center>
+https://flic.kr/s/aHskRnrFqU
+</center>
+
 #### Team photo
 Here is our team's photography took by the event's organization
 ![ucode_team](pics/ucode_smartlyteam.jpg)
@@ -301,10 +305,14 @@ This subject should become part of every subject, like master classes and practi
 # About the document
 This document is written using Markdown, and publicly available on-line in web format (HTML) in the following URL (mobile-compatible):
 <center>https://davidlj95.com/uab-current-trends</center>
+
 The PDF file is also available in the same site:
 
 <center>https://davidlj95.com/uab-current-trends/README.pdf</center>
+
 ## Sources
 Sources of this document are also publicly available in _GitHub_:
+
 <center>https://github.com/davidlj95/uab-current-trends</center>
+
 <div style="page-break-after: always;"></div>
