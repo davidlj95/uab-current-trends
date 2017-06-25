@@ -36,7 +36,7 @@ Along these pages, the activities (events and on-line courses) which I assisted 
 
 | Date | Time | Place | Organization | Price | Website |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2016-09-17 | 09:30h (CEST) | [Barcelona Mobile World Centre](https://goo.gl/maps/tY9qv6HnQ6o) | [Wolfram: Computation Meets Knowledge](https://www.wolfram.com) | _Free_ | https://goo.gl/VrKZ89 |
+| 2016-09-17 | 09:30h (CEST) | [Barcelona Mobile World Centre](https://goo.gl/maps/tY9qv6HnQ6o) | [Wolfram: Computation Meets Knowledge](https://www.wolfram.com) | _Free_ | [https://goo.gl/VrKZ89](https://goo.gl/VrKZ89) |
 
 ### Summary
 The activity started after registration and a short breakfast with the introduction by the organizer and Wolfram Europe Account Executive, Christopher Jordan to the _Wolfram_ company and its services, that are far more than the well known computing engine _Wolfram Alpha_.
@@ -68,7 +68,7 @@ To summarize, it was great to discover the Wolfram Mathematica software and its 
 
 | Date | Time | Place | Organization | Price | Website |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2016-12-01 | 10:30h (CET) | [Escola d'Enginyeria](https://goo.gl/maps/DaESrvtnoz72) | [Oficina de Valorització i Patents](http://www.uab.cat/web/serveis/valoritzacio-de-la-recerca-1345672826947.html) &amp; [Elzaburu](http://elzaburu.es/es/) | _Free_ | https://goo.gl/daxrHa |
+| 2016-12-01 | 10:30h (CET) | [Escola d'Enginyeria](https://goo.gl/maps/DaESrvtnoz72) | [Oficina de Valorització i Patents](http://www.uab.cat/web/serveis/valoritzacio-de-la-recerca-1345672826947.html) &amp; [Elzaburu](http://elzaburu.es/es/) | _Free_ | [https://goo.gl/daxrHa](https://goo.gl/daxrHa) |
 
 ### Summary
 After presenting themselves, the lawyers of [Elzaburu](http://elzaburu.es/es/) explained to the audience how (proprietary) software can be protected and securely commercialized after it has been developed. Starting with the definition of what is legally an invention, the presentation showed the main points an invention must provide in order for it to be patentable.
@@ -170,7 +170,7 @@ The event provided a great and fun experience to learn the KanBan methodology no
 
 | Date | Time | Place | Organization | Price | Website |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2016-11-28 | 00:00h (UTC) | (on-line) [Coursera](https://coursera.org)) | [University of Princeton](https://www.princeton.edu/) | _Free_ | https://goo.gl/s4cW8Y |
+| 2016-11-28 | 00:00h (UTC) | (on-line) [Coursera](https://coursera.org)) | [University of Princeton](https://www.princeton.edu/) | _Free_ | [https://goo.gl/s4cW8Y](https://goo.gl/s4cW8Y) |
 
 ### Summary
 This on-line course, provided by the _University of Princeton_, introduces us to the cryptocurrencies technologies, focusing in [Bitcoin](https://bitcoin.org) cryptocurrency. The course starts with an introduction to the base technologies that make cryptocurrencies possible, mainly cryptographical ones such as [hash functions](https://en.wikipedia.org/wiki/Hash_function) and [asymmetric cryptography](https://en.wikipedia.org/wiki/Asymmetric_crypto). After that, explains how this technologies combined with [blockchain technology](https://en.wikipedia.org/wiki/Blockchain) can make a cryptocurrency possible, avoiding the [double spend attack](https://en.wikipedia.org/wiki/Double-spending) and reaching a global worldwide consensus across all cryptocurrency users in the network (also called nodes). Once all technologies have been explained, explains at a high level how the Bitcoin is implemented. Eventually, the course finishes explaining political issues and other non-technical information about the cryptocurrency ecosystem like market exchanges (cryptocurrencies forex) and [mixing](https://en.bitcoin.it/wiki/Mixing_service).
@@ -194,7 +194,7 @@ The course provides a great introduction to cryptocurrencies at a general level 
 
 | Date | Time | Place | Organization | Price | Website |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2017-02-16 | 16:00h (CET) | [Escola d'Enginyeria](https://goo.gl/maps/DaESrvtnoz72) | [MSI Spain](https://es.msi.com/) | _Free_ | https://goo.gl/YWjHPr |
+| 2017-02-16 | 16:00h (CET) | [Escola d'Enginyeria](https://goo.gl/maps/DaESrvtnoz72) | [MSI Spain](https://es.msi.com/) | _Free_ | [https://goo.gl/YWjHPr](https://goo.gl/YWjHPr) |
 
 ### Summary
 The speech provided an introduction to the _MSI company_ and its impact in Spain, explaining the products they offered, why they are built that way, and the problems that appear while creating their hardware and what solutions do they apply to solve them. Despite the speakers being really talented as communicators, the speech didn't provide much knowledge, as it was focused on sponsoring the own company products and services versus the competence
@@ -218,7 +218,7 @@ In my opinion, the whole speech was a boringly large advertisement about all pro
 
 | Date | Time | Place | Organization | Price | Website |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2017-02-20 | 10:30h (CET) | [Antiga Fàbrica Estrella Damm](https://goo.gl/maps/3GujmcU3kfE2) | [Barcelona Blockchain Meetup](https://www.meetup.com/es-ES/barcelonablockchain/) | _Free_ | https://goo.gl/jHgUQu |
+| 2017-02-20 | 10:30h (CET) | [Antiga Fàbrica Estrella Damm](https://goo.gl/maps/3GujmcU3kfE2) | [Barcelona Blockchain Meetup](https://www.meetup.com/es-ES/barcelonablockchain/) | _Free_ | [https://goo.gl/jHgUQu](https://goo.gl/jHgUQu) |
 
 ### Summary
 This meetup, organized by Albert Castellana from the NEM foundation, consisted in the speech of several organizations that were developing [Blockchain technologies](https://en.wikipedia.org/wiki/Block_chain) related projects. The following speechs took place:
@@ -248,7 +248,7 @@ One of the most interesting talks I've assisted to, not just because the content
 
 | Date | Time | Place | Organization | Price | Website |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2017-03-11 | 18:00h (CET) | [EINA @ UniZar](https://goo.gl/maps/CoyBjN2kUox) | [EINA @ UniZar](https://eina.unizar.es/) | _Free*_ | http://ucode.es |
+| 2017-03-11 | 18:00h (CET) | [EINA @ UniZar](https://goo.gl/maps/CoyBjN2kUox) | [EINA @ UniZar](https://eina.unizar.es/) | _Free*_ | [http://ucode.es](http://ucode.es) |
 
 > *: they even offered studentships to pay for mobility charges for students who did not live in Zaragoza
 ### Summary
